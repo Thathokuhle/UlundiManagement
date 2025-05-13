@@ -1,0 +1,26 @@
+﻿@model List<UlundiManagement.ViewModels.Student.StudentViewModel>
+
+@{
+    ViewData["Title"] = "Students List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Full Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.StudentId</td>
+                <td>@student.FullName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
